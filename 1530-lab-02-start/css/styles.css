@@ -24,7 +24,10 @@ h1, h2 {
     font-family: 'Pacifico', cursive;
 }
 
-h1 { text-align: center;}
+h1 { 
+    text-align: center;
+    font-size: 2rem;
+}
 
 h2 {
     font-size: 4rem;
@@ -38,7 +41,12 @@ header {
     padding: 1rem;
 }
 
-.nav a {
+.flavour:focus, .about:focus-within ul, .shops:focus-within ul, .contact:focus {
+    color: #eeeaeb;
+    display: block;
+}
+
+a {
     text-decoration: underline;
     text-transform: uppercase;
     color: #eeeaeb;
@@ -67,12 +75,21 @@ svg {
 
 button {
     background-color: #20abad;
-    color: #eeeaeb;
     text-decoration: underline;
     border: none;
     border-radius: 6px;
     padding: .5rem 1rem;
     text-transform: uppercase;
+    line-height: 2;
+}
+
+button:hover {
+    background-color: #007c84;
+}
+
+.hero-text p {
+    word-wrap: break-word;
+    width: 300px;
 }
 /* MOBILE VIEW */
 
@@ -106,6 +123,13 @@ button {
         width: 50vw;
         top: 25%;
         left: 25%;
+    }
+
+    .hero-text p {
+        position: relative;
+        left: 9%;
+        padding-top: 1rem;
+        padding-bottom: 2rem;
     }
 }
 
@@ -146,7 +170,14 @@ button {
     .hero-text {
         text-align: center;
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 35%;
+        left: 40%;
+        line-height: 2;
+    }
+
+    .hero-text p {
+        position: relative;
+        left: 34%;
+        padding-bottom: 2rem;
     }
 }
