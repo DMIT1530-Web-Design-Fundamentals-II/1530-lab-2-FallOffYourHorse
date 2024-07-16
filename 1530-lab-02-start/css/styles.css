@@ -45,7 +45,10 @@ header {
 }
 
 svg {
-    width: 15px;
+    width: 20px;
+    height: auto;
+    padding-left: .5rem;
+    fill: #eeeaeb;
 }
 
 .nav>li {
