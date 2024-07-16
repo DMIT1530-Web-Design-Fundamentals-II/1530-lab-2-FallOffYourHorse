@@ -15,17 +15,135 @@ font-family: 'Pacifico', cursive;
 */
 
 /* UNIVERSAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #eeeaeb;
+}
 
+h1, h2 {
+    font-family: 'Pacifico', cursive;
+}
 
+h1 { text-align: center;}
+
+h2 {
+    font-size: 4rem;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    background-color: #3babac;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.nav a {
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #eeeaeb;
+}
+
+svg {
+    width: 15px;
+}
+
+.nav>li {
+    padding: 1rem 0;
+}
+
+.hero-banner {
+    background-image: url(../img/grapefruit-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding-top: 50rem;
+    z-index: 1;
+}
+
+button {
+    background-color: #20abad;
+    color: #eeeaeb;
+    text-decoration: underline;
+    border: none;
+    border-radius: 6px;
+    padding: .5rem 1rem;
+    text-transform: uppercase;
+}
 /* MOBILE VIEW */
 
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
 
+    .about-sub-menu li, .shops-sub-menu li {
+        padding-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    svg {
+        display: none;
+    }
+
+    .hero-banner {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(../img/grapefruit-bg.webp);
+        background-size: cover;
+        background-position: 0vw;
+    }
+
+    .hero-text {
+        position: absolute;
+        text-align: center;
+        width: 50vw;
+        top: 25%;
+        left: 25%;
+    }
 }
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    
+    .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .about-sub-menu, .shops-sub-menu {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        background-color: #3babac;
+        text-align: left;
+    }
+
+    .about-sub-menu li, .shops-sub-menu li {
+        padding: 0.5rem;
+    }
+
+    .about:hover>ul, .shops:hover>ul {
+        display: block;
+    }
+
+    svg {
+        display: inline;
+    }
+
+    .hero-banner {
+        background-image: url(../img/grapefruit-bg.webp);
+        background-size: cover;
+    }
+
+    .hero-text {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
 }
